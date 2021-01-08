@@ -12,9 +12,18 @@ function writePassword() {
 
 }
 
+
 //generator for password
-function generate() {
+function generatePassword() {
   let complexity = document.getElementById("generate").value;
+
+  var length = prompt("Between 8 to 128, how many characters?");
+  if (length < 8) {
+    alert("Error");
+  }
+  if (length > 128) {
+    alert("Error");
+  }
 
   //possible password values
   let values = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=";
@@ -22,11 +31,13 @@ function generate() {
   let password = "";
 
   //create for loop to choose password characters
-  for(var i = 0; i <= complexity; i++){
-    password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length - 1)));
+  for(var i = 0; i <= length; i++){
+    password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length)));
+    console.log(password);
   }
 
-  document.getElementById("display").value = password;
+  return(password);
+  // document.getElementById("returnPassword").textContent = password;
 }
 
 // Add event listener to generate button
