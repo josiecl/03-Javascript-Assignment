@@ -8,5 +8,7 @@ It's important to have security in a password. Passwords are used on so many sit
 Upon pressing the 'generate password' button, the user will be greeted with several prompts. If the user clicks 'no' for all of them, then the prompts will alert the user that they must select at least one.
 
 # Issues
-While working on this code, I ran into several issues. My biggest one was that I kept getting an 'error: out of memory' alert. I had inadvertently written a 'for' loop incorrectly, so it kept running until the webpage would run out of memory and crash. Thankfully, this was fixed relatively easily, but it did set me back for a while.
-I also kept getting a console log error. I was unsure how to fix this (and still am, rip)
+While working on this code, I ran into several issues. My biggest one was that I kept getting an 'error: out of memory' alert. I had inadvertently written a 'for' loop incorrectly, so it kept running until the webpage would run out of memory and crash. Thankfully, this was fixed relatively easily, but it did set me back for a while. The function also had random moments where it would seem to not work, but some tweaking seemed to fix this issue. 
+
+# Final product
+Overall this project has been optimized greatly. I think it is very user-friendly, as it is easy to use, and my troubleshooting seemed to come back all clear. It runs as intended, and it creates a random password based on the criteria needed. I'm very happy with the end result, as this project can be used to make a random password, which is very good for security. I'm glad to have been able to finish it.

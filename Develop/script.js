@@ -18,27 +18,14 @@ function writePassword() {
 
 }
 
-
-
-
-//generator for 
-
-// function getRandom(array) {
-//   var randomIndex = Math.floor(Math.random() * array.length);
-//   var randomCharacter = array[randomIndex];
-//   console.log(randomCharacter);
-//   return randomCharacter;
-// }
-
 // Function to generate the password
 function generatePassword() {
   var options = getOptions();
   var possibleCharacters = [];
   var result = [];
 
-  
- 
 
+  // If statements for the options to get pushed if selected
   if (options.uppercase) {
     for(var i = 0; i < capitals.length; i++) {
       possibleCharacters.push(capitals[i]);
@@ -57,7 +44,6 @@ function generatePassword() {
     for(var i = 0; i < numeric.length; i++) {
       possibleCharacters.push(numeric[i]);
     }
-    // console.log(possibleCharacters);
   };
 
   if (options.symbols) {
@@ -72,33 +58,12 @@ function generatePassword() {
   for(var i = 0; i < options.length; i++) {
 
     newPassword += possibleCharacters[Math.floor(Math.random() * possibleCharacters.length)];
-    // console.log(newPassword);
 
-
-    // var possibleCharacter = getRandom(possibleCharacters);
-    // result.push(possibleCharacter);
-    // console.log(result);
   }
 
   return newPassword
 
-  
-
-
-  //create for loop to choose password characters
-
-  // for(var i = 0; i <= length; i++){
-  //   password = password + values.charAt(Math.floor(Math.random() * Math.floor(values.length)));
-  //   console.log(password);
-  // }
-
-  // return(password);
-
-  // document.getElementById("returnPassword").textContent = password;
 }
-
-
-
 
 
 // function to ask all the prompt questions, then retrieve selected answers and push them to the output
@@ -106,9 +71,12 @@ function getOptions() {
 
   // Running into issues if length < 8 and if length is near 128.. 
   var length = prompt("Between 8 to 128, how many characters?");
-  if (length < 8) {
+  if (length < 8 && length) {
     alert("Error: must be at least 8 characters");
     getOptions();
+  }
+  else if (!length) {
+    return false;
   }
   if (length > 128) {
     alert("Error: must be at most 128 characters");
@@ -138,10 +106,6 @@ function getOptions() {
 
     return passwordOptions
   }
-
-
-
-
   
 }
 
