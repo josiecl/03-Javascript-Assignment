@@ -12,3 +12,6 @@ While working on this code, I ran into several issues. My biggest one was that I
 
 # Final product
 Overall this project has been optimized greatly. I think it is very user-friendly, as it is easy to use, and my troubleshooting seemed to come back all clear. It runs as intended, and it creates a random password based on the criteria needed. I'm very happy with the end result, as this project can be used to make a random password, which is very good for security. I'm glad to have been able to finish it.
+
+# Deployed URL
+[!Deployed site](https://josiecl.github.io/03-Javascript-Assignment/)
